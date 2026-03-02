@@ -25,7 +25,7 @@ client.on('MESSAGE_CREATED', async ({ body }) => {
 
   if (digits_in_message.length === 0) {
     console.log('No digits found in the message. Skipping response.');
-    await api.channels.postMessage(channelId, { content: "No digits found in the message.", embed: true });
+    await api.channels.postMessage(channelId, { content: ":runtime_error:", embed: true });
     return;
   }
 
@@ -33,7 +33,7 @@ client.on('MESSAGE_CREATED', async ({ body }) => {
 
   if (digits > 7600n){
     console.log('Digits exceed 7600. Skipping response.');
-    await api.channels.postMessage(channelId, { content: "長すぎ", embed: true });
+    await api.channels.postMessage(channelId, { content: ":memory_limit_exceeded:", embed: true });
     return;
   }
 
