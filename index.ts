@@ -31,8 +31,8 @@ client.on('MESSAGE_CREATED', async ({ body }) => {
 
   const digits = BigInt(digits_in_message.join(''));
 
-  if (digits > 9500n){
-    console.log('Digits exceed 9500. Skipping response.');
+  if (digits > 7600n){
+    console.log('Digits exceed 7600. Skipping response.');
     await api.channels.postMessage(channelId, { content: "長すぎ", embed: true });
     return;
   }
