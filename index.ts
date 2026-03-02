@@ -23,13 +23,19 @@ client.on('MESSAGE_CREATED', async ({ body }) => {
 
   digits_in_message = digits_in_message.slice(16);
 
-  if (digits_in_message.length === 0 || digits_in_message.length >= 4) {
+  if (digits_in_message.length === 0) {
     console.log('No digits found in the message. Skipping response.');
-    await api.channels.postMessage(channelId, { content: "Invalid input", embed: true });
+    await api.channels.postMessage(channelId, { content: "No digits found in the message.", embed: true });
     return;
   }
 
   const digits = BigInt(digits_in_message.join(''));
+
+  if (digits > 9500n){
+    console.log('Digits exceed 9500. Skipping response.');
+    await api.channels.postMessage(channelId, { content: "長すぎ", embed: true });
+    return;
+  }
 
   let value = 1n;
   let counter_2 = 0n;
