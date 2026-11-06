@@ -4,12 +4,15 @@
   "type": "module",
   "private": true,
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/ws": "^8.18.2"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
-    "traq-bot-ts": "^1.5.2"
+    "@types/kuromoji": "^0.1.3",
+    "kuromoji": "^0.1.2",
+    "traq-bot-ts": "^1.4.0"
   }
 }
