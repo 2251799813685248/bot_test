@@ -4,6 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "build": "bun build index.ts --target=bun --minify --outdir dist",
     "patch:traq-bot-ts": "bun run scripts/patch-traq-bot.ts"
   },
   "devDependencies": {
@@ -14,8 +15,7 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "@types/kuromoji": "^0.1.3",
-    "kuromoji": "^0.1.2",
+    "budoux": "0.10.3",
     "traq-bot-ts": "1.5.2"
   }
 }

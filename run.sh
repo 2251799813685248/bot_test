@@ -1,2 +1,2 @@
-#!/bin/bash
-bun run index.ts
+#!/bin/sh
+exec bun dist/index.js
