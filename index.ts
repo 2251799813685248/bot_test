@@ -71,13 +71,13 @@ client.on('MESSAGE_CREATED', async ({ body }) => {
     if (plainText == `@BOT_2251799813685248 join`){
         console.log(`joined to ${channelId}`);
         await api.bots.letBotJoinChannel("019ca9ff-d4e7-72ef-bc48-d76875345802", {channelId: channelId});
-        await api.channels.postMessage("019a4ce9-d2de-74f6-9245-f43e303b1b6d", {content: "join request: :accepted:", embed: true});
+        await api.channels.postMessage(channelId, {content: "join request: :accepted:", embed: true});
         return;
     }
     if (plainText == `@BOT_2251799813685248 leave`){
         console.log(`leaved from ${channelId}`);
         await api.bots.letBotLeaveChannel("019ca9ff-d4e7-72ef-bc48-d76875345802", {channelId: channelId});
-        await api.channels.postMessage("019a4ce9-d2de-74f6-9245-f43e303b1b6d", {content: "leave request: :accepted:", embed: true});
+        await api.channels.postMessage(channelId, {content: "leave request: :accepted:", embed: true});
         return;
     }
 
