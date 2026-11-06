@@ -6,7 +6,8 @@ WORKDIR /app
 
 # パッケージの依存関係ファイルをコピーしてインストール
 COPY package.json bun.lock ./
-RUN bun install
+COPY patches ./patches
+RUN bun install --frozen-lockfile
 
 # プロジェクトのソースコードをすべてコピー
 COPY . .

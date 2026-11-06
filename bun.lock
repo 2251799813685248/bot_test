@@ -5,7 +5,7 @@
     "": {
       "name": "bot_test",
       "dependencies": {
-        "traq-bot-ts": "^1.5.2",
+        "traq-bot-ts": "1.5.2",
       },
       "devDependencies": {
         "@types/bun": "latest",
@@ -14,6 +14,9 @@
         "typescript": "^5",
       },
     },
+  },
+  "patchedDependencies": {
+    "traq-bot-ts@1.5.2": "patches/traq-bot-ts@1.5.2.patch",
   },
   "packages": {
     "@types/bun": ["@types/bun@1.3.9", "", { "dependencies": { "bun-types": "1.3.9" } }, "sha512-KQ571yULOdWJiMH+RIWIOZ7B2RXQGpL1YQrBtLIV3FqDcCu6FsbFUBwhdKUlCKUpS3PJDsHlJ1QKlpxoVR+xtw=="],
