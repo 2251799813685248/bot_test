@@ -15,6 +15,7 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "ahocorasick": "^1.0.2",
     "budoux": "0.10.3",
     "traq-bot-ts": "1.5.2"
   }
